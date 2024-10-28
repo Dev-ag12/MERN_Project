@@ -1,5 +1,4 @@
 # MERN_Project
-# Sociopedia
 
 ## Overview
 Sociopedia is a modern social media platform built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It provides users with a familiar social networking experience while incorporating essential features for user engagement and interaction.
@@ -32,15 +31,30 @@ Sociopedia is a modern social media platform built using the MERN (MongoDB, Expr
   - Post engagement metrics
 - Social profile linking (Twitter, LinkedIn)
 
+## Project Structure
+```
+sociopedia/
+├── client/                 # React frontend
+│   ├── public/
+│   ├── src/
+│   └── package.json
+│
+└── server/                 # Node.js backend
+    ├── controllers/
+    ├── models/
+    ├── routes/
+    └── package.json
+```
+
 ## Tech Stack
 
-### Frontend
+### Frontend (client/)
 - React.js
 - Modern UI libraries
 - State management
 - Responsive design principles
 
-### Backend
+### Backend (server/)
 - Node.js
 - Express.js
 - MongoDB
@@ -57,15 +71,15 @@ Sociopedia is a modern social media platform built using the MERN (MongoDB, Expr
 # Clone the repository
 git clone https://github.com/yourusername/sociopedia.git
 
-# Install dependencies for backend
-cd backend
+# Install server dependencies
+cd server
 npm install
 
-# Install dependencies for frontend
-cd ../frontend
+# Install client dependencies
+cd ../client
 npm install
 
-# Create .env file in backend directory
+# Create .env file in server directory
 touch .env
 
 # Add the following variables to .env
@@ -73,18 +87,18 @@ MONGODB_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
 PORT=3001
 
-# Start the backend server
-cd backend
-npm start
+# Start the server
+cd server
+nodemon index.js
 
-# Start the frontend development server
-cd frontend
+# Start the client development server
+cd client
 npm start
 ```
 
 ## Environment Variables
 
-Create a `.env` file in the backend directory with the following variables:
+Create a `.env` file in the server directory with the following variables:
 
 ```
 MONGODB_URI=your_mongodb_connection_string
